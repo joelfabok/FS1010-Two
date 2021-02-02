@@ -1,0 +1,58 @@
+
+
+.mainContent {
+    text-align: center;
+    background-color: lightgray;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2%;
+    padding-top: 1%;
+}
+
+.items {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.add {
+    padding: 12px 20px;
+}
+
+.list {
+    list-style-position: inside;
+    
+}
+
+ol li {
+    cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 16px;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.strike{text-decoration: line-through;}
+
+
+ol li.checked:before {
+    content: '';
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
