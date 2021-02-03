@@ -2,23 +2,31 @@ $(document).ready(
     function(){
         $('.add').click(
             function(){
-                var toAdd = $('input[name=item]').val();
-                 $('ol').append('<li class="checked">' + toAdd + '</li>');
+                let toAdd = $('input[name=item]').val();
+                 $('ol').append('<li>' + toAdd + '</li>' + '<button class="close">X</button>');
+                 
+                 if( !$(this).val() ) {
+                    $(this).parents('').addClass('warning');
+              }
+                    
             });
             
-        
-      
-      $(document).on('click','li', function(){
-        $(this).toggleClass('checked').toggleClass('strike');
-        
-      });
-      
-      $('input').click(function() {
-        $(this).val('');
-      });
-      
-      $('ol').sortable(); 
+        $(document).on('dblclick','li', function(){
+        $(this).toggleClass('checked').toggleClass('strike').fadeout('slow');
+            
+        });
+        $('input').click(function() {
+            $(this).val('');
+          });   
+          
+          $('ol').sortable(); 
       
     }
+    
 );
+
+
+
+
+
 
