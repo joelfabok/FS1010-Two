@@ -1,4 +1,4 @@
-
+/* Main Body */
 
 .mainContent {
     text-align: center;
@@ -26,10 +26,10 @@
 
 
 ul li{
-  display: inline-block;
+  
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+  padding: 12px 50px 12px 40px;
   background: #eee;
   font-size: 16px;
   transition: 0.2s;
@@ -40,12 +40,12 @@ ul li{
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3px;
+  list-style: none;
+  margin-top: 5px;
+  word-wrap:break-word;
 }
 
-ul li:hover {
-  background-color: grey;
-}
+
 
 .strike{text-decoration: line-through;}
 
@@ -63,21 +63,12 @@ ul li:hover {
     width: 7px;
   }
 
-/* .close:after {
-    content: '';
-    position: absolute;
-    border-color: black;
-    content: '\d7';
-    top: 5px;
-    right: 16px;
-    font-size: x-large;
-  } */
-
   .close {
     border: none;
     position: absolute;
     padding: 13.5px;
-    margin-top: 3px;
+    right: 0;
+    top: 0;
     
     
   }
@@ -86,7 +77,11 @@ ul li:hover {
 
   }
 
+  button .close:nth-child(even){background: #dfdfdf;}
+
   ul li:nth-child(even){background: #dfdfdf;}
+
+
 
 
   

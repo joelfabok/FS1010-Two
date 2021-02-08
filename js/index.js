@@ -1,5 +1,6 @@
 $(document).ready(
     function(){
+        let key = '13';
         $('.add').click(
             function(){
                 let toAdd = $('input[name=item]').val();
@@ -9,28 +10,26 @@ $(document).ready(
                   }
                   
                   else {
-                    $('ul').append('<li>' + toAdd + '</li>' + '<button class="close">X</button>');
+                    $('ul').append('<li id="what">' + toAdd + '<button class="close">X</button>' + '</li>');
                   }
-                    
             });
             
-        $(document).on('dblclick','li', function(){
+        $(document).on('click','li', function(){
         $(this).toggleClass('checked').toggleClass('strike');
-            
         });
 
         $('.add').click(function(){				 
                 $('input[name=item]').val('');
         });
-          
-          $('ul').sortable(); 
-      
+        
+        $('ul').on("click", ".close", function(e) {
+            e.preventDefault();
+            $(this).parent().remove();
+        });
+
+        
+
+        
+        
     }
-    
 );
-
-
-
-
-
-

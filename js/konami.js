@@ -1,10 +1,10 @@
 
-var Konami = Konami || {};
+let Konami = Konami || {};
 
 Konami.key = '38384040373937396665';
 
 Konami.onCode = function(callback) {
-    var input = '';
+    let input = '';
     $(document).on("keydown", function(e) {
         input += ("" + e.keyCode);
         if (input === Konami.key) {
@@ -15,8 +15,7 @@ Konami.onCode = function(callback) {
                 
                 $("body").css ({
                     'background-image' : "url('https://media4.giphy.com/media/eiGU1eOEoxIIYL4I42/giphy.gif')",
-                    'background-repeat' : 'no-repeat',
-                    
+                    'background-repeat' : 'no-repeat',  
                 })
             }
             else {
