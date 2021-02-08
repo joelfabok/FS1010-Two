@@ -1,9 +1,9 @@
 $(document).ready(
     function(){
 
-        // ***********************************//
-        // This Will Add Item To List On Enter//
-        // ***********************************//
+        // *********************************** //
+        // This Will Add Item To List On Enter //
+        // *********************************** //
         
         $('input').keydown(function(e) {
             if (e.which === 13) {
@@ -12,15 +12,15 @@ $(document).ready(
                   }                                     
                   
                   else {
-                    $("ul").prepend("<li>" + this.value + '<button class="close">X</button>' + "</li>");
+                    $(".undone").append("<li>" + this.value + '<button class="close"><i class="fa fa-trash"></i></span></button>' + "</li>");
                   }
                 this.value = "";
             }
         });
 
-        // **********************************************//
-        // This Will Add Item To List When Add Is Clicked//
-        // **********************************************//
+        // ********************************************** //
+        // This Will Add Item To List When Add Is Clicked //
+        // ********************************************** //
         $('.add').click(
             function(){
                 let toAdd = $('input[name=item]').val();
@@ -29,22 +29,30 @@ $(document).ready(
                   }
                   
                   else {
-                    $('ul').prepend('<li>' + toAdd + '<button class="close">X</button>' + '</li>');
+                    $('.undone').append('<li>' + toAdd + '<button class="close">X</button>' + '</li>');
                   }
-                toAdd = "";
         
             });
             
-        $(document).on('click','li', function(){
-            let last = $(".list li").last();
-            let first = $(".list li").first();
-        $(this).toggleClass('checked').toggleClass('strike');
-
-        });
-
-        $('.add').click(function(){				 
+            $('.add').click(function(){				 
                 $('input[name=item]').val('');
+            });
+
+        // ******************************************************************* //
+        // This Will Check Off And Put A Line Through Item And Move It To Done //
+        // ******************************************************************* //
+          
+        $(document).on('click','.undone li', function(){
+        $(this).toggleClass('checked').toggleClass('strike').appendTo('.done');
         });
+
+        // ***************************************************************** //
+        // This Will Remove Line A Checkmark From Item And Move It To Undone //
+        // ***************************************************************** //
+
+        $(document).on('click','.done li', function(){
+            $(this).toggleClass('checked').toggleClass('strike').appendTo('.undone');
+            });
         
         $('ul').on("click", ".close", function(e) {
             e.preventDefault();

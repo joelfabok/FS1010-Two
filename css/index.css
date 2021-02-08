@@ -25,8 +25,7 @@
 }
 
 
-ul li{
-  
+li{
   cursor: pointer;
   position: relative;
   padding: 12px 50px 12px 40px;
@@ -43,6 +42,7 @@ ul li{
   list-style: none;
   margin-top: 5px;
   word-wrap:break-word;
+  font-weight: normal;
 }
 
 
@@ -70,18 +70,26 @@ ul li{
     right: 0;
     top: 0;
     
-    
   }
   .close:hover {
-      background-color: darkorange;
+
+      background-color: red;
 
   }
 
-  button .close:nth-child(even){background: #dfdfdf;}
 
   ul li:nth-child(even){background: #dfdfdf;}
 
 
 
 
-  
+.undone{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.done {
+  font-size: 20px;
+  font-weight: bold;
+}
