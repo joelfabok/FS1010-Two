@@ -33,7 +33,7 @@ $(document).ready(
                   }
                   
                   else {
-                    $('.undone').append('<li>' + toAdd + '<button class="close"><i class="fa fa-trash"></i></button>' + '</li>');
+                    $('.undone').append('<li id="move">' + toAdd + '<button class="close"><i class="fa fa-trash"></i></button>' + '</li>');
                   }
         
             });
@@ -66,11 +66,11 @@ $(document).ready(
         // Makes It So That When I Start Up The Page You Are Typing In The Text Box //
         $('.textBox').focus(); 
         
-
-        
-        
     }
 );
+
+
+
 
 
 
