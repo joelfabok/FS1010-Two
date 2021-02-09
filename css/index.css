@@ -29,6 +29,7 @@ body{
   margin: 8px 0 8px 20px;
   box-sizing: border-box;
   border-radius: 10px;
+  border: none;
 }
 
 /*****************************/
@@ -53,13 +54,14 @@ body{
   border-radius: 10px;
   box-shadow: 0 5px #999;
   
+  
 }
 
 .addButton:hover {background-color: white}
 
 .addButton:active {
   background-color: white;
-  box-shadow: 0 5px #666;
+  box-shadow: 0 2px #666;
   transform: translateY(3px);
 }
 
@@ -71,26 +73,26 @@ body{
 }
 
 
-li{
+ul li{
   cursor: pointer;
   position: relative;
   padding: 12px 50px 12px 40px;
   background: #c5c6c7;
   font-size: 16px;
+  font-weight: normal;
   transition: 0.2s;
-  user-select: none;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
-  word-wrap:break-word;
-  font-weight: normal;
+  margin-top: 6px;
+  word-wrap: break-word;
   color: black;
   border-radius: 10px;
   text-transform:capitalize;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 
 
@@ -121,27 +123,32 @@ ul li:nth-child(even){
     width: 7px;
   }
 
+/********************************/
+/******** Delete Button *********/
+/********************************/
+
   li .close {
     border: none;
     position: absolute;
-    padding: 13.5px;
+    height: 100%;
     right: 0;
     top: 0; 
     opacity: 0;
     background-color: #e74c3c;
     transition: all .3s;
+    width: 0;
   }
   
   li:hover .close {
-    width: 65px;
+    width: 60px;
     opacity: 1;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
-    
   }
-
-
   
+  i {
+    color: white;
+  }
 
 /*****************************/
 /******* List Sections *******/

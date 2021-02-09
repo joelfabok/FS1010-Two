@@ -15,7 +15,7 @@ $(document).ready(
                   }                                     
                   
                   else {
-                    $(".undone").append("<li>" + this.value + '<button class="close"><i class="fa fa-trash"></i></button>' + "</li>");
+                    $(".undone").append("<li>" + this.value + '<button class="close"><i class="fas fa-trash"></i></button>' + "</li>");
                   }
                 this.value = "";
                 
