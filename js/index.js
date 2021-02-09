@@ -1,6 +1,6 @@
 $(document).ready(
     function(){
-        $(".textBox").keyup(function() {
+        $('.textBox').keyup(function() {
             toUpper(this);
             });
 
@@ -11,11 +11,11 @@ $(document).ready(
         $('input').keydown(function(e) {
             if (e.which === 13) {
                 if (!$('input').val()) {                
-                    alert('Please Add Item');           
+                    swal('Please Add Item In Text Box');           
                   }                                     
                   
                   else {
-                    $(".undone").append("<li>" + this.value + '<button class="close"><i class="fas fa-trash"></i></button>' + "</li>");
+                    $('.undone').append('<li>' + this.value + '<button class="close"><i class="fas fa-trash"></i></button>' + '</li>');
                   }
                 this.value = "";
                 
@@ -29,7 +29,7 @@ $(document).ready(
             function(){
                 let toAdd = $('input[name=item]').val();
                 if (!$('input').val()) {
-                    alert('Please Add Item');
+                    swal('Please Add Item In Text Box');
                   }
                   
                   else {
@@ -58,13 +58,15 @@ $(document).ready(
             $(this).toggleClass('checked').toggleClass('strike').appendTo('.undone');
             });
         
-        $('ul').on("click", ".close", function(e) {
+        $('ul').on('click', '.close', function(e) {
             e.preventDefault();
             $(this).parent().remove();
         });
 
         // Makes It So That When I Start Up The Page You Are Typing In The Text Box //
         $('.textBox').focus(); 
+        
+
         
         
     }

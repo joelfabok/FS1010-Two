@@ -9,13 +9,14 @@ Konami.onCode = function(callback) {
         input += ("" + e.keyCode);
         if (input === Konami.key) {
             if(typeof callback == 'undefined') {
-                $("main").css({
+                $('main').css({
                     'display': 'none',
                 }); 
                 
-                $("body").css ({
+                $('body').css ({
                     'background-image' : "url('https://media4.giphy.com/media/eiGU1eOEoxIIYL4I42/giphy.gif')",
-                    'background-repeat' : 'no-repeat',  
+                    'background-repeat' : 'no-repeat',
+                    'background-position' : 'center',  
                 })
             }
             else {
