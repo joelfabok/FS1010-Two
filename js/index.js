@@ -1,5 +1,8 @@
 $(document).ready(
     function(){
+        $(".textBox").keyup(function() {
+            toUpper(this);
+            });
 
         // *********************************** //
         // This Will Add Item To List On Enter //
@@ -12,16 +15,17 @@ $(document).ready(
                   }                                     
                   
                   else {
-                    $(".undone").append("<li>" + this.value + '<button class="close"><i class="fa fa-trash"></i></span></button>' + "</li>");
+                    $(".undone").append("<li>" + this.value + '<button class="close"><i class="fa fa-trash"></i></button>' + "</li>");
                   }
                 this.value = "";
+                
             }
         });
 
         // ********************************************** //
         // This Will Add Item To List When Add Is Clicked //
         // ********************************************** //
-        $('.add').click(
+        $('.addButton').click(
             function(){
                 let toAdd = $('input[name=item]').val();
                 if (!$('input').val()) {
@@ -29,12 +33,12 @@ $(document).ready(
                   }
                   
                   else {
-                    $('.undone').append('<li>' + toAdd + '<button class="close">X</button>' + '</li>');
+                    $('.undone').append('<li>' + toAdd + '<button class="close"><i class="fa fa-trash"></i></button>' + '</li>');
                   }
         
             });
             
-            $('.add').click(function(){				 
+            $('.addButton').click(function(){				 
                 $('input[name=item]').val('');
             });
 
@@ -59,8 +63,13 @@ $(document).ready(
             $(this).parent().remove();
         });
 
+        // Makes It So That When I Start Up The Page You Are Typing In The Text Box //
+        $('.textBox').focus(); 
+        
         
     }
 );
+
+
 
 

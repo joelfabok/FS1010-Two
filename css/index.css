@@ -1,27 +1,73 @@
-/* Main Body */
-
+/*****************************/
+/********** Main Body ********/
+/*****************************/
+body{
+  background-color:  #0b0c10;
+}
 .mainContent {
     text-align: center;
-    background-color: lightgray;
+    background-color: #1f2833;
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2%;
     padding-top: 1%;
+    margin-top: 2%;
 }
 
-.items {
+.title {
+  color: #66fcf1;
+  font-size: 40px;
+  font-family: orange juice;
+}
+/*****************************/
+/********** Text Box *********/
+/*****************************/
+
+.textBox {
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px 0 8px 20px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.add {
+/*****************************/
+/********* Add Button ********/
+/*****************************/
+.addButton {
     padding: 12px 20px;
 }
 
-.list {
-    list-style-position: inside;
+.addButton {
+  display: inline-block;
+  padding-left: 70px;
+  padding-top: 25px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #999;
+  
+}
+
+.addButton:hover {background-color: white}
+
+.addButton:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+
+/*****************************/
+/*********** List ************/
+/*****************************/
+#list {
+    list-style-type: none;
 }
 
 
@@ -29,27 +75,39 @@ li{
   cursor: pointer;
   position: relative;
   padding: 12px 50px 12px 40px;
-  background: #eee;
+  background: #c5c6c7;
   font-size: 16px;
   transition: 0.2s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  width: 50%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
-  list-style: none;
   margin-top: 5px;
   word-wrap:break-word;
   font-weight: normal;
+  color: black;
+  border-radius: 10px;
+  text-transform:capitalize;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 
 
-.strike{text-decoration: line-through;}
+ul li:nth-child(even){
+  background: #fff;
+}
 
 
+
+.strike{
+  text-decoration: line-through;
+}
+
+/********************************/
+/* Once the item is in the list */
+/********************************/
 .checked:before {
     content: '';
     position: absolute;
@@ -63,33 +121,33 @@ li{
     width: 7px;
   }
 
-  .close {
+  li .close {
     border: none;
     position: absolute;
     padding: 13.5px;
     right: 0;
-    top: 0;
+    top: 0; 
+    opacity: 0;
+    background-color: #e74c3c;
+    transition: all .3s;
+  }
+  
+  li:hover .close {
+    width: 65px;
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
     
   }
-  .close:hover {
-
-      background-color: red;
-
-  }
 
 
-  ul li:nth-child(even){background: #dfdfdf;}
+  
 
+/*****************************/
+/******* List Sections *******/
+/*****************************/
 
-
-
-.undone{
-  font-size: 20px;
-  font-weight: bold;
-}
-
-
-.done {
-  font-size: 20px;
-  font-weight: bold;
+h3 {
+  color: #66fcf1;
+  
 }
