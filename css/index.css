@@ -67,6 +67,7 @@ body{
   box-shadow: 0 4px #999;
   font-family:"Century Gothic", "HelveticaNeueLT Pro 45 Lt", sans-serif;  
   color: #666;
+  margin-left: 2%;
   text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
 }
 
@@ -113,10 +114,7 @@ ul li{
   color: black;
   border-radius: 10px;
   text-transform:capitalize;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  
 }
 
 
