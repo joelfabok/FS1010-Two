@@ -30,12 +30,13 @@ let global = {
           reset();
         }
         if (count == 10){
-          $('section').css({
-            'display': 'none',
+           $('main').css({
+            'animation': '5s hinge',
         }); 
         
         $('img').css ({
             'display' : 'block',
+            'position' : 'absolute',
             'repeat' : 'no-repeat',
             'margin' : 'auto',
             'animation': '11s spinImg infinite',
