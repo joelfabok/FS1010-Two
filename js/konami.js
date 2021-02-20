@@ -30,15 +30,19 @@ let global = {
           reset();
         }
         if (count == 10){
-          $('main').css({
+          $('section').css({
             'display': 'none',
         }); 
         
-        $('body').css ({
-            'background-image' : "url('https://media4.giphy.com/media/eiGU1eOEoxIIYL4I42/giphy.gif')",
-            'background-repeat' : 'no-repeat',
+        $('img').css ({
+            'display' : 'block',
+            'repeat' : 'no-repeat',
+            'margin' : 'auto',
+            'animation': '11s spinImg infinite',
             
         })
+
+
         setTimeout(function(){
           location.reload();
          },5000);
