@@ -39,14 +39,14 @@ let global = {
             'position' : 'absolute',
             'repeat' : 'no-repeat',
             'margin' : 'auto',
-            'animation': '11s spinImg infinite',
+            'animation': '5s moving infinite',
             
         })
 
 
         setTimeout(function(){
           location.reload();
-         },5000);
+         },4600);
           
         }
       } 
